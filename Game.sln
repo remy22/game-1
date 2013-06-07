@@ -5,7 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game.csproj", "{311
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EE726621-83B9-48FD-A1FF-21D372D2BA1D}"
 	ProjectSection(SolutionItems) = preProject
-		Maps\desert.tmx = Maps\desert.tmx
+		lib\csfml-audio-2.dll = lib\csfml-audio-2.dll
+		lib\csfml-graphics-2.dll = lib\csfml-graphics-2.dll
+		lib\csfml-window-2.dll = lib\csfml-window-2.dll
 	EndProjectSection
 EndProject
 Global
