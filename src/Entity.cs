@@ -9,10 +9,11 @@ namespace Game {
     public class Entity : Transformable {
         private static Dictionary<string, Texture> textures = new Dictionary<string, Texture>();
 
+        public Vector2f Velocity { set; get; }
         public World World { set; get; }
 
         public virtual void Update(World world) {
-            // Do nothing! 
+            Position += Velocity * World.Delta;
         }
 
         public static Texture GetTexture(string filename) {

@@ -13,10 +13,13 @@ namespace Game {
         }
 
         public override void Update(World world) {
+            Vector2f vel = new Vector2f();
             if (Keyboard.IsKeyPressed(Keyboard.Key.A))
-                Position -= new Vector2f(1, 0);
+                vel.X = -1;
             if (Keyboard.IsKeyPressed(Keyboard.Key.D))
-                Position += new Vector2f(1, 0);
+                vel.X = 1;
+            Velocity = vel * 4.5f;
+            base.Update(world);
         }
 
         public void Draw(RenderTarget target, RenderStates states) {

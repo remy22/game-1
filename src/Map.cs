@@ -9,6 +9,7 @@ namespace Game {
     public class Map : Entity, Drawable {
         private LinkedList<Layer> layers = new LinkedList<Layer>();
         private LinkedList<Tileset> tilesets = new LinkedList<Tileset>();
+        private Sprite background = new Sprite(GetTexture("images/background.jpg"));
 
         public Map() {
         }
@@ -18,6 +19,7 @@ namespace Game {
         }
 
         public void Draw(RenderTarget target, RenderStates states) {
+            target.Draw(background, states);
             foreach (Layer l in layers) {
                 target.Draw(l, states);
             }
